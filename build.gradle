@@ -11,7 +11,7 @@ buildscript {
 }
 
 plugins {
-    id "org.jetbrains.intellij" version "0.0.42"
+    id "org.jetbrains.intellij" version "0.2.5"
 }
 
 apply plugin: 'idea'
@@ -20,8 +20,8 @@ apply plugin: 'java'
 apply plugin: "kotlin"
 
 compileJava {
-    sourceCompatibility = 1.8
-    targetCompatibility = 1.8
+    sourceCompatibility = 1.7
+    targetCompatibility = 1.7
 }
 
 intellij {
@@ -49,12 +49,12 @@ repositories {
 }
 
 dependencies {
-    compile 'com.fasterxml.jackson.module:jackson-module-kotlin:2.7.3'
+    compile 'com.fasterxml.jackson.module:jackson-module-kotlin:2.8.6'
     compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion"
     compile "org.jetbrains.kotlin:kotlin-runtime:$kotlinVersion"
     testCompile 'junit:junit:4.12'
 
-    gen 'de.jflex:jflex:1.6.0'
+    gen 'de.jflex:jflex:1.6.1'
     gen files('lib/gk/grammar-kit-patched.jar')
 }
 
